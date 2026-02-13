@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Favorite Person ❤️</title>
+    <style>
+        :root {
+            --pink: #ff4d6d;
+            --light-pink: #fff0f3;
+            --bg: #121212;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Intro Section */
+        #intro {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle, #2d0a1a 0%, #121212 100%);
+            position: relative;
+            z-index: 10;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #yesBtn { background: var(--pink); color: white; }
+        #noBtn { background: #444; color: white; position: relative; }
+
+        /* Pinterest Masonry Grid */
+        #main-content {
+            display: none; /* Hidden until "Yes" is clicked */
+            padding: 20px;
+        }
+
+        .masonry {
+            column-count: 3;
+            column-gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) { .masonry { column-count: 2; } }
+        @media (max-width: 480px) { .masonry { column-count: 1; } }
+
+        .pin {
+            display: inline-block;
+            width: 100%;
+            background: #1e1e1e;
+            margin-bottom: 15px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #333;
+            transition: transform 0.3s;
+        }
+
+        .pin:hover { transform: scale(1.02); }
+        .pin img { width: 100%; display: block; }
+        .pin-text { padding: 15px; font-size: 0.9rem; color: #ccc; }
+
+        /* Floating Hearts */
+        .heart {
+            position: fixed;
+            color: var(--pink);
+            font-size: 20px;
+            user-select: none;
+            pointer-events: none;
+            animation: move 5s linear forwards;
+        }
+
+        @keyframes move {
+            0% { transform: translateY(100vh) scale(0); opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="intro">
+        <h1>Will you be my Valentine? 🌹</h1>
+        <div class="buttons">
+            <button id="yesBtn">YES! ❤️</button>
+            <button id="noBtn">No</button>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <h2 style="text-align:center; color: var(--pink);">Our Memories ✨</h2>
+        <h3 style="text-align:center; color: var(--pink);">A collection of all our alt picks</h3>
+        <div class="masonry">
+            <div class="pin">
+                <img src="shiesty.jpg" alt="scawryyy">
+                <div class="pin-text">ohhhh my gawwwd my babe is soo scawwwrrryy</div>
+            </div>
+            <div class="pin">
+                <img src="sktech.png" alt="Sketch of you">
+                <div class="pin-text">Drew this for you. You're my favorite muse.</div>
+            </div>
+            <div class="pin">
+                <img src="pixle_art.png" alt="Pixel Art">
+                <div class="pin-text">Little pixel version of you.</div>
+            </div>
+            <div class="pin">
+                <img src="food.jpg" alt="Eating out">
+                <div class="pin-text">That time I went to McDs... absolute chaos.</div>
+            </div>
+            <div class="pin">
+                <img src="food_you.jpg" alt="bukaaad">
+                <div class="pin-text">BUKAAADDDDDDDDDDDDDDDDDDD</div>
+            </div>
+            <div class="pin">
+                <img src="suttad.PNG" alt="sleepyhead">
+                <div class="pin-text">SUTAAAADDDDDDDDDDDD</div>
+            </div>
+            <div class="pin">
+                <img src="serious.jpg" alt="">
+                <div class="pin-text"></div>
+            </div>
+            <div class="pin">
+                <img src="puffer.jpg" alt="puffer">
+                <div class="pin-text">i look like a pufffer fish lol</div>
+            </div>
+            <div class="pin">
+                <img src="hand1.jpg" alt="u love my hands sooo much">
+                <div class="pin-text">u love y hands sooo much</div>
+            </div>
+            <div class="pin">
+                <img src="me_sleep.jpg" alt="zz">
+                <div class="pin-text">snoreeeeeeeeeeeeeeeeeee i don't, u do</div>
+            </div>
+            <div class="pin">
+                <img src="kiss.jpg" alt="kisssss">
+                <div class="pin-text">kisssssssssssssssssssssssssssss</div>
+            </div>
+            <div class="pin">
+                <img src="hand.jpg" alt="hand">
+                <div class="pin-text">u love my hands don't u bub?</div>
+            </div>
+            <div class="pin">
+                <img src="green_kiss.jpg" alt="kisss">
+                <div class="pin-text">loveee u sooo much kisssessssssss</div>
+            </div>
+            <div class="pin">
+                <img src="goofy2.jpg" alt="goofy">
+                <div class="pin-text">u biggest goof</div>
+            </div>
+            <div class="pin">
+                <img src="goofy1.jpg" alt="goofy">
+                <div class="pin-text">u bigger goof</div>
+            </div>
+            <div class="pin">
+                <img src="goofy.jpg" alt="goofy">
+                <div class="pin-text">u big goof</div>
+            </div>
+            <div class="pin">
+                <img src="foodie.jpg" alt="foodie">
+                <div class="pin-text">ur a foodie</div>
+            </div>
+            </div><br><br><br>
+        <h2 style="text-align:center; color: var(--pink);">More to be added sooon</h2>    
+        </div>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById('noBtn');
+        const yesBtn = document.getElementById('yesBtn');
+        const intro = document.getElementById('intro');
+        const main = document.getElementById('main-content');
+
+        // No button runs away
+        noBtn.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+            noBtn.style.position = 'absolute';
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        });
+
+        // Yes button reveals the board
+        yesBtn.addEventListener('click', () => {
+            intro.style.display = 'none';
+            main.style.display = 'block';
+            setInterval(createHeart, 300);
+        });
+
+        // Floating hearts logic
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+    </script>
+</body>
+</html>
