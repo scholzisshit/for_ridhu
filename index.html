@@ -200,14 +200,14 @@
             noBtn.style.top = `${y}px`;
         });
 
-        // Yes button reveals the board
+        
         yesBtn.addEventListener('click', () => {
             intro.style.display = 'none';
             main.style.display = 'block';
             setInterval(createHeart, 300);
         });
 
-        // Floating hearts logic
+        
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('heart');
